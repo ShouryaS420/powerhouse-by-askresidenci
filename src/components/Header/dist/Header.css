@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 0.5rem 2rem;
+  color: #fff;
+}
+.header .header__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.header .header__left {
+  display: flex;
+  align-items: center;
+}
+.header .header__left .menu-icon {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header .header__left .logo {
+  height: 50px;
+  margin-left: 10px;
+}
+.header .header__right .header__button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.header .header__right .header__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    flex-direction: column;
+  }
+}

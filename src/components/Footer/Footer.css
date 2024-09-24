@@ -1,0 +1,181 @@
+.footer-section {
+    background-color: #ffffff;
+    padding: 20px 0 0px 0;
+    /* text-align: center; */
+}
+
+.footer-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-section .container .footer-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-heading {
+    font-size: 28px;  /* Larger size for emphasis */
+    color: #d3d3d3;  /* Deeper color for prominence */
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;  /* Spacing out letters for slogan effect */
+    text-transform: uppercase;  /* Uppercase for more impact */
+    width: 30%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 54%;
+}
+
+.footer-content .qr-code {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.qr-code img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.qr-code p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.app-links h2 {
+    color: #292929;
+    margin: 10px 0;
+}
+
+.app-links p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #7f8c8d;
+}
+
+.download-button {
+    display: inline-block;
+    margin: 10px;
+}
+
+.download-button img {
+    height: 40px;
+}
+
+.footer-links-group {
+    padding: 15px 0;
+    margin-top: 15px;
+    border: 1px solid #e4e4e4;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    background-color: #f9f9f9;
+}
+
+.footer-links-group .footer-links-group-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links-group .footer-links a {
+    color: #4f4f4f;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 15px;
+    border-right: 1px solid #c5c5c5;
+    display: inline-flex;
+}
+
+.footer-links-group .social-links a {
+    color: #4f4f4f;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 15px;
+    border-right: 1px solid #c5c5c5;
+    display: inline-flex;
+}
+
+.footer-links-group .footer-links a:nth-last-child(1) {
+    border-right-width: 0px;
+}
+
+.footer-links-group .social-links a:nth-last-child(1) {
+    border-right-width: 0px;
+}
+
+.footer-links-group .footer-links a:hover, .footer-links-group .social-links a:hover {
+    color: #292929;
+}
+
+.disclaimer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.copyright {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding: 15px 0;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .footer-section .container .footer-content-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;  /* Reversing order so heading is at the bottom */
+        width: 100%;
+    }
+
+    .footer-links-group .footer-links a {
+        border-right-width: 0px;
+        padding: 0;
+    }
+
+    .footer-links-group .social-links a {
+        border-right-width: 0px;
+        padding: 0;
+    }
+
+    .footer-links-group .footer-links-group-container {
+        flex-direction: column;
+    }
+
+    .footer-links a, .social-links a {
+        margin: 5px 13px !important; /* More vertical spacing, less horizontal */
+    }
+
+    .qr-code {
+        display: none !important;  /* Hiding QR code on smaller screens */
+    }
+
+    .app-links {
+        order: 1;  /* Ensuring app links are above the heading */
+    }
+
+    .footer-heading {
+        order: 2;  /* Heading goes below the app links */
+        font-size: 22px;  /* Slightly smaller font size on mobile */
+        width: 100%;
+    }
+}

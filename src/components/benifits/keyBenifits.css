@@ -1,0 +1,150 @@
+/* Base styles */
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#home-page {
+    width: auto;
+    margin: 0 auto;
+    padding: 22px;
+}
+
+.heading-h2 {
+    color: #333;
+    font-size: 24px;
+    /* margin-bottom: 20px; */
+    /* text-align: center; */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.home-usecases-tabs-menu {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* justify-content: center; */
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #eff6ff;
+    align-items: center;
+    border-radius: 4rem;
+    background-color: #eff6ff;
+    width: fit-content !important;
+    margin: 0 auto;
+}
+
+.home-usecases-tabs-link.show {
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.home-usecases-tabs-link {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 9px 30px;
+    text-align: left;
+    cursor: pointer;
+    color: #222;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.sliding-background {
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    background-color: #007bff;
+    z-index: -1;
+}
+
+.home-usecases-tabs-link.active {
+    transform: scale(1.1); /* Zoom in the active tab */
+    z-index: 1; /* Ensure the text appears above the sliding background */
+}
+
+.home-usecases-tabs-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    align-items: center;
+}
+
+.home-usecases-tabs-content-main {
+    display: flex;
+    flex-direction: column-reverse; /* Image below text on small screens */
+    align-items: center;
+}
+
+.home-usecases-tabs-content-text {
+    text-align: center;
+}
+
+.home-usecases-tabs-content-text h3 {
+    color: #292929;
+}
+
+.home-usecases-tabs-content-text p {
+    margin-bottom: 21px;
+    color: #7f8c8d;
+}
+
+.home-usecases-tabs-content-image {
+    max-width: 90%; /* Full width on small screens */
+    height: auto;
+    /* margin-top: 20px; */
+}
+
+.button-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 800px) {
+    .home-usecases-tabs-menu {
+        width: auto !important;
+    }
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    /* .home-usecases-tabs-menu {
+        justify-content: flex-start;
+        width: auto;
+    } */
+
+    .home-usecases-tabs-content-main {
+        flex-direction: row; /* Side by side layout on larger screens */
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+    }
+
+    .home-usecases-tabs-content-text,
+    .home-usecases-tabs-content-image {
+        max-width: 50%;
+    }
+
+    .heading-h2 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-usecases-tabs-content-text {
+        text-align: left; /* Text aligned left on large screens */
+    }
+}
